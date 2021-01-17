@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
-    [Route("api/news")]
+    //[Route("api/news")]
     [EnableCors("CorsPolicy")]
     [ApiController]
     public class BlogPostsController : ControllerBase
