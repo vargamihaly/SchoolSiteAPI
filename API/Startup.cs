@@ -20,7 +20,7 @@ namespace API
     {
 
 
-
+      
 
         public Startup(IConfiguration configuration)
         {
@@ -78,8 +78,7 @@ namespace API
 
             services.AddSingleton(typeof(IDataGenerator<>), typeof(DataGeneratorService<>));
 
-            services.Configure<FormOptions>(o =>
-            {
+            services.Configure<FormOptions>(o => {
                 o.ValueLengthLimit = int.MaxValue;
                 o.MultipartBodyLengthLimit = int.MaxValue;
                 o.MemoryBufferThreshold = int.MaxValue;
@@ -100,11 +99,10 @@ namespace API
                 dummyParser.AddDummyUserDataIfNeeded(ref context);
             }
 
-            app.UseSwagger();
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
 

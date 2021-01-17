@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/montagh-schoolsite/databases/Schoolsite_Database",
+      "type": "mssql.azure",
+      "connectionId": "DevConnection",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
